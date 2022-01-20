@@ -126,6 +126,19 @@ html::-webkit-scrollbar-thumb {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+
+/*agent start*/
+#agents{
+  margin: 4rem 0 6rem;
+  padding: 0 0 6rem;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+/* footer start*/
+
 #footer{
   background-color: #1EAB07;
   display: flex;
