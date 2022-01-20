@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+:root {
+  --clr1: #1EAB07;
+  --clr2: #fff;
+  --clr3: #000;
+  --clr4: #0C4803;
+  --clr5: limegreen;
+}
+
+/* Style for entire body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+html {
+  font-size: 65%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--clr4);
+}
+
 .head {
   position: fixed;
   top: 0;
