@@ -1,26 +1,29 @@
 <h1>{{title}}</h1>
 <h2>Add Quote</h2>
-<div class="container">
-  <div class="row">
-    <div class="mx-auto">
-      <form class="quote-form">
+  <div class="col-sm-6">
+    
+    <form #userform="ngForm" (ngSubmit)="onSubmit(userForm.value)">
         
-        <input type="text" placeholder="Name">
+        <label>Your Name</label>
+        <input type="text" ngModel class="form-control">
         <br><br>
 
-        <input type="text" placeholder="Title">
+        <label></label>
+        <input type="text" ngModel class="form-control">
         <br><br>
 
-        <textarea name="" id="" cols="30" rows="10">Quote</textarea>
+        <label >Quote</label>
+        <textarea name="" id="" cols="30" rows="10" ngModel class="form-control">Quote</textarea>
         <br><br>
 
-        <input type="text" placeholder="Author">
+        <label>Author</label>
+        <input type="text" ngModel class="form-control">
         <br><br>
 
-        <button>Add Quote</button>
-        
-      </form>
-    </div>
+        <button type="submit" class="btn btn-primary">Add Quote</button>
+
+    </form>
+    
   </div>
-</div>
+
 
