@@ -2,9 +2,33 @@
   <div class="row">
     <div class="mx-auto">
       <form class="quote-form">
+        
         <mat-form-field class="quote-fukll-width">
-          <input matInput placeholder="">
+          <input matInput placeholder="Name">
         </mat-form-field>
+
+        <br><br>
+
+        <mat-form-field class="quote-fukll-width">
+          <input matInput placeholder="title">
+        </mat-form-field>
+
+        <br><br>
+
+        <mat-form-field class="quote-fukll-width">
+          <input matInput placeholder="Quote">
+        </mat-form-field>
+
+        <br><br>
+
+        <mat-form-field class="quote-fukll-width">
+          <input matInput placeholder="Author">
+        </mat-form-field>
+        
+        <br><br>
+
+        <button mat-raised button color="primary" (click)="sendData"()>Add Quote</button>
+      
       </form>
     </div>
   </div>
