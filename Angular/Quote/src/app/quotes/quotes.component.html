@@ -15,7 +15,9 @@
               <p class="card-text">{{quote.quote}}</p> 
               <span class="row">Submited By:<p>{{quote.submitedBy}}</p></span>
               <span class="rows">
-                <i (click)='upVote(quote)' class="far fa-thumbs-up"></i>
+                <a class="pr-5">
+                  <i (click)='upVote(quote)' class="far fa-thumbs-up"></i>
+                </a>
               </span>
             </div>
           </div>
