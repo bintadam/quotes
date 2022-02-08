@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Quotes } from '../quotes';
+import { Quotes } from '../../app/quotes';
 
 @Component({
   selector: 'app-quotes',
@@ -36,6 +36,20 @@ export class QuotesComponent implements OnInit {
   upVote(quote:any){
     quote.upvote= quote.upvote+1;
     console.log('quote.upvote')
+  }
+
+  downVote(quote:any){
+    quote.downvote = quote.downvote+1;
+  }
+
+  quoteDelete(isComplete:any, index:any){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
   }
 
   constructor() { }
