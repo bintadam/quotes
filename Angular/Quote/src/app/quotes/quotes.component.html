@@ -6,6 +6,11 @@
           <app-add-quote (addQuote)="newQuote($event)"></app-add-quote>>
         </div>
       </div>
+      <div class="row col-md-6">
+        <div *ngFor='let quote of quotes;let delete =index' class="mb-4 d-flex align-items-stretch">
+          
+        </div>
+      </div>
     </div>
   </div>
 </div>
