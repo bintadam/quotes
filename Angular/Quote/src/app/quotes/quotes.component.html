@@ -16,7 +16,13 @@
               <span class="row">Submited By:<p>{{quote.submitedBy}}</p></span>
               <span class="rows">
                 <a class="pr-5">
-                  <i (click)='upVote(quote)' class="far fa-thumbs-up"></i>
+                  <i (click)='upVote(quote)' class="far fa-thumbs-up"></i>{{quote.upvote}}
+                </a>
+                <a class="pr-5">
+                  <i  (click)='downVote(quote)' class="far fa-thumbs-down"></i>{{quote.downvote}}
+                </a>
+                <a>
+                  <i  (click)= 'quoteDelete($event,delete)' style='color:red'  class="fas fa-trash"></i>
                 </a>
               </span>
             </div>
