@@ -21,6 +21,18 @@ export class QuotesComponent implements OnInit {
 
   ]
 
+  getCurrentId(){
+    return this.quotes.length +1
+  }
+  newQuote(quote:any) {
+    quote.id = this.getCurrentId();
+    quote.author= quote.author;
+    quote.title=quote.title;
+    quote.quote=quote.quote;
+    quote.submitedBy=quote.submitedBy;
+    this.quotes.unshift(quote)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
