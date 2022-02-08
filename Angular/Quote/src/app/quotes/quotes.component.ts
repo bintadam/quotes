@@ -33,6 +33,11 @@ export class QuotesComponent implements OnInit {
     this.quotes.unshift(quote)
   }
 
+  upVote(quote:any){
+    quote.upvote= quote.upvote+1;
+    console.log('quote.upvote')
+  }
+
   constructor() { }
 
   ngOnInit(): void {
