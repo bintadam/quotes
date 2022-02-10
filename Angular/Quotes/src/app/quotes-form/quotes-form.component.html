@@ -31,4 +31,15 @@
       </div>
   </div>
 
+  <div class="form-group">
+    <label for="medium  " class="text-white"><b>Date</b></label>
+    <input type='date' id="medium" class="form-control bg-dark" [(ngModel)]="newQuote.mediumDate" name="mediumDate" #mediumDate="ngModel" required>
+    <div [hidden]="mediumDate.valid || mediumDate.pristine" class="alert alert-danger">
+          <p>Date is required</p>
+    </div>
+</div>
+<div class="form-group">
+    <button type="submit" class="btn btn-dark btn-md mt-6">Add Quote</button>
+</div>
+
 </form>
