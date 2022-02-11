@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-quote-form',
+  selector: 'quote-form',
   templateUrl: './quote-form.component.html',
   styleUrls: ['./quote-form.component.css']
 })
-export class QuoteFormComponent implements OnInit {
+export class QuoteFormComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+ log(x: any){
+   console.log(x);
+ };
+ 
 }
