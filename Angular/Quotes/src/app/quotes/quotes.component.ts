@@ -1,4 +1,5 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { Component, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote'; 
 
 @Component({
@@ -9,12 +10,15 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
   newQuote = new Quote(0,'','','',new Date(),);
-  @Output() addQuote = new EventEmitter<Quote>();
 
-  submitQuote(){
-    this.addQuote.emit(this.newQuote);
+
+  submitQuote(value: any){
+  var quote = value.quote;
+  var author = value.author;
+  var Date = value.Date;
+  var name = value.name;
+  alert (quote+author+Date+name)
   }
-
   constructor() { }
 
   ngOnInit(): void {
