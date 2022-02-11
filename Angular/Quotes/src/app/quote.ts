@@ -1,19 +1,15 @@
 import { stringify } from "querystring";
 
 export class Quote {
-  quote: String;
-  author: String;
-  Date: any;
-  name: String;
-  constructor
-  (Date:Date,
-    author:String,
-    quote: String,
-    name : String)
-    {
-    this.quote=quote;
-    this.author= author;
-    this.name= name;
-    this.Date
+  
+  constructor(public id:number, public quote:string, public name:string, public author:string, public date:Date){
+    this.id = id;
+    this.quote = quote;
+    this.name = name;
+    this.author = author;
+    this.date = date;
   }
-}
+  
+
+    
+}  
