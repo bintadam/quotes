@@ -11,17 +11,34 @@
     <label for="author">Author</label>
     <input type="text" id="author" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
   </div>
+  
   <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
     <p>This field is required</p>
   </div>
+
   <br><br>
+
   <div class="form-group">
     <label for="quote">Quote</label>
     <textarea id="quote" class="form-control" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
   </div>
+
   <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
     <p>This field is required</p>
   </div>
+
   <br><br>
+
+  <div class="form-group">
+    <label for="medium  " class="text-white"><b>Date</b></label>
+    <input type='date' id="medium" class="form-control bg-dark" [(ngModel)]="newQuote.mediumDate" name="mediumDate" #mediumDate="ngModel" required>
+    <div [hidden]="mediumDate.valid || mediumDate.pristine" class="alert alert-danger">
+          <p>Date is required</p>
+    </div>
+  </div>
+
+  <br><br>
+
   <button>Add Quote</button>
+
 </form>
