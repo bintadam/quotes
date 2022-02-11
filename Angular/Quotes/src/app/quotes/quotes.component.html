@@ -1,3 +1,27 @@
+<tr>
+  <div *ngFor= 'let quote of quotes;let i = index'>
+         
+      <td id="{{i}}"> {{ quote.quote}} {{ quote.date|date }}</td>
+      <td class="blockquote-footer float-right">
+          uthor <br> <cite title="Author"> {{ quote.author }} </cite>
+      </td>
+      <td class="blockquote-footer float-left">
+          name <br> <cite title="name"> {{ quote.name }} </cite>
+      </td>
+       
+      
+      <!-- <button (click)='toggleDetails(i)' class="btn btn-outline-light m-2">Quote Details</button>
+
+      <div *ngIf='quote.showDescription'>
+          <app-quote *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+      </div> -->
+      
+                                   
+  </div>
+
+</tr>
+  
+
 <form #form = ngForm (ngSubmit)=submitQuote(form.value)>
   <div class="form-group">
     <label for="name">Name</label>
