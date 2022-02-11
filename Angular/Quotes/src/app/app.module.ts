@@ -4,22 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
-import { QuotesFormComponent } from './quotes-form/quotes-form.component';
-import { QuotesDetailsComponent } from './quotes-details/quotes-details.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuotesFormComponent,
-    QuotesDetailsComponent
+    QuoteDetailsComponent,
+    QuoteFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule, 
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
