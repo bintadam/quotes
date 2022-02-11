@@ -15,7 +15,7 @@ export class QuotesComponent implements OnInit {
   submitQuote(value: any){
   var quote = value.quote;
   var author = value.author;
-  var Date = value.Date;
+  var Date = value.medium;
   var name = value.name;
   alert (quote+author+Date+name)
   }

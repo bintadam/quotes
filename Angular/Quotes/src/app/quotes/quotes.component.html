@@ -30,10 +30,10 @@
   <br><br>
 
   <div class="form-group">
-    <label for="medium  " class="text-white"><b>Date</b></label>
-    <input type='date' id="medium" class="form-control bg-dark" [(ngModel)]="newQuote.mediumDate" name="mediumDate" #mediumDate="ngModel" required>
-    <div [hidden]="mediumDate.valid || mediumDate.pristine" class="alert alert-danger">
-          <p>Date is required</p>
+    <label for="date">Date</label>
+    <input type='date' id="date" class="form-control" [(ngModel)]="newQuote.date" name="date" #date ="ngModel" required>
+    <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+      <p>Date is required</p>
     </div>
   </div>
 
