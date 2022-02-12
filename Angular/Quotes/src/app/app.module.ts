@@ -9,6 +9,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     QuotesComponent,
