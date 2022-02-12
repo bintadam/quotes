@@ -44,6 +44,22 @@ export class QuotesComponent implements OnInit {
   this.isComplete.emit(complete);
 }
 
+deleteQuote(isComplete, index){
+  if (isComplete) {
+    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+
+
+  numberoflikes : number=0
+  dislikebuttonclick(){
+  this.numberoflikes++;
+  }
+
+
+  numberoflikes : number=0
+  likebuttonclick(){
+  this.numberoflikes++;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
