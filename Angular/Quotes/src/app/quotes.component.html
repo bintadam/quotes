@@ -1,6 +1,7 @@
-<form #form = ngForm (ngSubmit)=submitQuote(form.value)>
+<h1 class="text-center text-white">Create A Quote</h1>
+<form class="ft" #form = ngForm (ngSubmit)=submitQuote(form.value)>
   <div class="form-group">
-    <label for="name">Name</label>
+    <label for="name" class="text-white">Name</label>
     <input type="text" id="name" class="form-control" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
   </div>
   <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
@@ -8,7 +9,7 @@
   </div>
   <br><br>
   <div class="form-group">
-    <label for="author">Author</label>
+    <label for="author" class="text-white">Author</label>
     <input type="text" id="author" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
   </div>
   
@@ -19,7 +20,7 @@
   <br><br>
 
   <div class="form-group">
-    <label for="quote">Quote</label>
+    <label for="quote" class="text-white">Quote</label>
     <textarea id="quote" class="form-control" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
   </div>
 
@@ -35,7 +36,7 @@
 
 <br><br>
 
-<table class = "table table-sm table-dark">
+<table class = "table">
   <tr>
   <div *ngFor= 'let quote of quotes;let i = index'>
          
