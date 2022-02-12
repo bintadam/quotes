@@ -19,6 +19,7 @@ export class QuotesComponent implements OnInit {
   ];
 
   newQuote = new Quote('','','',new Date(),);
+  isComplete: any;
 
 
   submitQuote(value: any){
@@ -38,6 +39,10 @@ export class QuotesComponent implements OnInit {
    alert("yyyyyy")
  }
   
+
+ quoteDelete(complete:boolean){
+  this.isComplete.emit(complete);
+}
 
   constructor() { }
 
