@@ -36,7 +36,6 @@ export class QuotesComponent implements OnInit {
    newQuote.name= name;
    newQuote.author = author;
    this.quotes.push(newQuote) ;
-   alert("yyyyyy")
  }
   
 
@@ -44,21 +43,21 @@ export class QuotesComponent implements OnInit {
   this.isComplete.emit(complete);
 }
 
-deleteQuote(isComplete, index){
-  if (isComplete) {
-    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+//  deleteQuote(isComplete, index){
+//   if (isComplete) {
+//     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
 
 
-  numberoflikes : number=0
-  dislikebuttonclick(){
-  this.numberoflikes++;
-  }
+  // numberoflikes : number=0
+  // dislikebuttonclick(){
+  // this.numberoflikes++;
+  //  }
 
 
-  numberoflikes : number=0
-  likebuttonclick(){
-  this.numberoflikes++;
-  }
+  // numberoflikes : number=0
+  // likebuttonclick(){
+  // this.numberoflikes++;
+  // }
 
   constructor() { }
 
