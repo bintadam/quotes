@@ -8,6 +8,12 @@ import { Quote } from '../quote';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+
+
+  numberoflikes : number=0
+  likebuttonclick(){
+  this.numberoflikes++;
+  }
  
   quotes:Quote[]=
   [  new Quote('In the sweetness of friendship let there be laughter, and sharing of pleasures. For in the dew of little things the heart finds its morning is refreshed.','Zakiya Adam','Khalil Gibran',new Date(2022, 1,7)),
