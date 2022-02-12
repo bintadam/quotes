@@ -1,6 +1,5 @@
-import { DatePipe } from '@angular/common';
 import { identifierName } from '@angular/compiler';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote'; 
 
 @Component({
@@ -19,7 +18,6 @@ export class QuotesComponent implements OnInit {
   ];
 
   newQuote = new Quote('','','',new Date(),);
-  isComplete: any;
 
 
   submitQuote(value: any){
@@ -36,28 +34,16 @@ export class QuotesComponent implements OnInit {
    newQuote.name= name;
    newQuote.author = author;
    this.quotes.push(newQuote) ;
+   alert("yyyyyy")
  }
   
+ @Input()
+  quote!: Quote;
+ @Output() isComplete = new EventEmitter<boolean>();
 
  quoteDelete(complete:boolean){
-  this.isComplete.emit(complete);
-}
-
-//  deleteQuote(isComplete, index){
-//   if (isComplete) {
-//     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
-
-
-  // numberoflikes : number=0
-  // dislikebuttonclick(){
-  // this.numberoflikes++;
-  //  }
-
-
-  // numberoflikes : number=0
-  // likebuttonclick(){
-  // this.numberoflikes++;
-  // }
+   this.isComplete.emit(complete);
+ }
 
   constructor() { }
 
