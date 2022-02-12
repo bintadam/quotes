@@ -31,9 +31,9 @@ export class QuotesComponent implements OnInit {
  addQuote(newQuote: Quote,author: any, name: any, Date: any, quote: any){
    newQuote.quote= quote;
    newQuote.name= name;
-   newQuote.date = new Date(newQuote.date);
    newQuote.author = author;
-   this.quotes.push(newQuote);
+   this.quotes.push(newQuote) ;
+   alert("yyyyyy")
  }
   
 
