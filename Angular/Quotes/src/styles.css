@@ -6,4 +6,8 @@ body {
 .form-group{
   text-align: center;
   color: white;
+  margin: 5px;
+  width: 50%;
+  padding-left: 30%;
+  
 }
