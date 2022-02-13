@@ -37,8 +37,8 @@ export class QuotesComponent implements OnInit {
    alert("yyyyyy")
  }
 
- quoteDelete(complete:boolean){
-  this.quoteDelete
+ quoteDelete(index: any){
+ this.quotes.splice(index,1)  
 }
  
   constructor() { }

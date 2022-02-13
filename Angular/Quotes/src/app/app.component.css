@@ -1,1 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap.css';
+h1{
+  color: white;
+  text-align: center;
+}

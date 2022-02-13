@@ -1,27 +1,55 @@
+<h2 class="text-center text-white">Shared quotes</h2>
+<div class="container ">
+  <table class = "table">
+    <tbody>
+      <tr>
+        <div *ngFor= 'let quote of quotes;let i = index'>
+         
+          <td id="{{i}}"> {{ quote.quote}} {{ quote.date|date }}</td>
+          <td class="blockquote-footer float-right">
+            author <br> <cite title="Author"> {{ quote.author }} </cite>
+          </td>
+          <td>
+            name <br> <cite title="name"> {{ quote.name }} </cite>
+          </td>
+
+          <button (click)= 'quoteDelete($event,i)' class="btn btn-outline-danger m-2">Delete quote</button>
+
+          <button (click)>Like</button>
+
+          <button>dislike</button>
+                                      
+        </div>
+
+    </tr>
+  </table>  
+</div>
+<br><br>
+
 <form class="ft" #form = ngForm (ngSubmit)=submitQuote(form.value)>
-  <h1></h1>
-  <div class="form-group">
+  <h1>create quote</h1>
+  <div class="row">
     <label for="name" class="text-white">Name</label>
-    <input type="text" id="name" class="form-control" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
+    <input type="text" id="name" class="form-control  bg-dark tx" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
   </div>
   <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
     <p>This field is required</p>
   </div>
   <br><br>
-  <div class="form-group">
+  <div class="row">
     <label for="author" class="text-white">Author</label>
-    <input type="text" id="author" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+    <input type="text" id="author" class="form-control  bg-dark tx" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
   </div>
-  
+
   <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
     <p>This field is required</p>
   </div>
 
   <br><br>
 
-  <div class="form-group">
+  <div class="row">
     <label for="quote" class="text-white">Quote</label>
-    <textarea id="quote" class="form-control" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
+    <textarea id="quote" class="form-control  bg-dark tx" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
   </div>
 
   <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
@@ -33,33 +61,3 @@
   <button type="submit">Add Quote</button>
 
 </form>
-
-
-
-<br><br>
-
-<table class = "table">
-  <tr>
-  <div *ngFor= 'let quote of quotes;let i = index'>
-         
-      <td id="{{i}}"> {{ quote.quote}} {{ quote.date|date }}</td>
-      <td class="blockquote-footer float-right">
-          uthor <br> <cite title="Author"> {{ quote.author }} </cite>
-      </td>
-      <td>
-          name <br> <cite title="name"> {{ quote.name }} </cite>
-      </td>
-
-      <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger m-2">Delete quote</button>
-
-      <span><img src="../assets/like.png" class="img" alt="thumbs down" (click)=likebuttonclick()></span>
-      <span>{{numberoflikes}}</span>
-
-     <span><img src="../assets/dislike.png" class="img" alt="thumbs down" (click)=likebuttonclick()></span>
-     <span>{{numberoflikes}}</span>
-
-                                      
-  </div>
-
-  </tr>
-</table>  
