@@ -9,6 +9,12 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
  
+  numberOfLikes : number=100;
+  numberOfDislike: number=25;
+  chooseclassl:boolean = true;
+  chooseclassd:boolean = true;
+
+
   quotes:Quote[]=
   [  new Quote('In the sweetness of friendship let there be laughter, and sharing of pleasures. For in the dew of little things the heart finds its morning is refreshed.','Zakiya Adam','Khalil Gibran',new Date(2022, 1,7)),
   new Quote(' I have learned silence from the talkative, toleration from the intolerant, and kindness from the unkind; yet, strange, i am ungrateful to those teachers.','Zakiya Adam','Khalil Gibran ',new Date(2021,4, 5  )),
@@ -18,6 +24,9 @@ export class QuotesComponent implements OnInit {
   ];
 
   newQuote = new Quote('','','',new Date(),);
+  disQuotes: any;
+  likesCounter: boolean | undefined;
+  dislikeCounter: boolean | undefined;
 
 
   submitQuote(value: any){
@@ -38,17 +47,40 @@ export class QuotesComponent implements OnInit {
  }
 
  quoteDelete(index: any){
- this.quotes.splice(index)  
+  this.quotes.splice(index)  
 }
 
- quoteLike(index: any){
-   this.quotes.splice(index)
- }
-
- quoteDislike(index: any){
-  this.quotes.splice(index)
+likeButtonClick() {
+  if (this.likesCounter === true && this.dislikeCounter === true) {
+    this.numberOfLikes++;
+    this.likesCounter = false;
+  } else if (this.likesCounter === true && this.dislikeCounter === false) {
+    this.numberOfLikes++;
+    this.likesCounter = false;
+    this.numberOfDislike--;
+    this.dislikeCounter = true;
+  } else if (this.likesCounter === false && this.dislikeCounter === true) {
+    this.numberOfLikes--;
+    this.likesCounter = true;
+  }
 }
- 
+
+dislikeButtonClick() {
+  if (this.dislikeCounter === true && this.likesCounter === true) {
+    this.numberOfDislike++;
+    this.dislikeCounter = false;
+  } else if (this.dislikeCounter === true && this.likesCounter === false) {
+    this.numberOfDislike++;
+    this.numberOfLikes--;
+    this.dislikeCounter = false;
+    this.likesCounter = true;
+  } else if (this.dislikeCounter === false && this.likesCounter === true) {
+    this.numberOfDislike--;
+    this.dislikeCounter = true;
+  }
+}
+
+
   constructor() { }
 
   ngOnInit(): void {

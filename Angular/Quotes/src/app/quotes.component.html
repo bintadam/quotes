@@ -60,10 +60,14 @@
 
           <button (click)= 'quoteDelete($event,i)' class="btn btn-outline-danger m-2">Delete quote</button>
 
-          <button (click)='quoteLike($event, i)' class="btn btn-outline-success" >like</button>
+          <div>
+          
+            <button (click)="likeButtonClick()" [ngClass]="chooseclassl ? 'like-button' : 'liked'"> Like | {{numberOfLikes}} </button>
+            <button (click)="dislikeButtonClick()" [ngClass]="chooseclassd ? 'dislike-button' : 'disliked'"> Dislike | {{numberOfDislike}} </button>
 
-          <button (click)='quoteDislike($event, i)' class="btn btn-outline-danger" >dislike</button>
-                                      
+          </div>
+
+                                    
         </div>
 
     </tr>
