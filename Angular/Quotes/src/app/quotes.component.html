@@ -30,14 +30,14 @@
 
       <br><br>
 
-      <button class="btn" type="submit">Add Quote</button>
+      <button id="btn" class="btn" type="submit">Add Quote</button>
   </div>
 </form>
   
 <br><br>
 
 <h2 class="text-center text-white"><b>Shared quotes</b></h2>
-<div class="container mr-10">
+<div class="container ">
   <table class = "table table-sm table-dark">
     <thead>
       <tr>
@@ -58,12 +58,14 @@
             name <br> <cite title="name"> {{ quote.name }} </cite>
           </td>
 
+          <button>submit</button>
           <button (click)= 'quoteDelete($event,i)' class="btn btn-outline-danger m-2">Delete quote</button>
 
-          <div>
+          <div >
           
-            <button (click)="likeButtonClick()" [ngClass]="chooseclassl ? 'like-button' : 'liked'"> Like | {{numberOfLikes}} </button>
-            <button (click)="dislikeButtonClick()" [ngClass]="chooseclassd ? 'dislike-button' : 'disliked'"> Dislike | {{numberOfDislike}} </button>
+            <!-- <button  (click)="likeButtonClick()" class="btn btn-outline-success" [ngClass]="chooseclassl ? 'like-button' : 'liked'"> Like | {{numberOfLikes}} </button>
+            <button i (click)="dislikeButtonClick()" class="btn btn-outline-danger" [ngClass]="chooseclassd ? 'dislike-button' : 'disliked'"> Dislike | {{numberOfDislike}} </button> -->
+
 
           </div>
 
