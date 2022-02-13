@@ -3,3 +3,10 @@
 body {
     background: url(../src/assets/horses.jpeg)center/cover fixed no-repeat;
 }
+.form-group{
+  text-align: center;
+  color: white;
+  
+  
+
+}

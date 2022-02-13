@@ -1,5 +1,5 @@
 import { identifierName } from '@angular/compiler';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote'; 
 
 @Component({
@@ -8,18 +8,12 @@ import { Quote } from '../quote';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-
-
-  numberoflikes : number=0
-  likebuttonclick(){
-  this.numberoflikes++;
-  }
  
   quotes:Quote[]=
   [  new Quote('In the sweetness of friendship let there be laughter, and sharing of pleasures. For in the dew of little things the heart finds its morning is refreshed.','Zakiya Adam','Khalil Gibran',new Date(2022, 1,7)),
   new Quote(' I have learned silence from the talkative, toleration from the intolerant, and kindness from the unkind; yet, strange, i am ungrateful to those teachers.','Zakiya Adam','Khalil Gibran ',new Date(2021,4, 5  )),
   new Quote('Has love been blood written?','Zakiya Adam','Hadrawi.',new Date(2019, 6, 9)),
-  new Quote('Your task is not to seek love, but merely to seek and find all the barriers within yourself that you have built against it','Zakiya Adam','Rumi.',new Date(2019, 6, 9)),
+  new Quote('Your task is not to seek love, but merely to seek and find all the barriers within yourself that you built','Zakiya Adam','Rumi.',new Date(2015, 6, 9)),
 
   ];
 
@@ -42,15 +36,11 @@ export class QuotesComponent implements OnInit {
    this.quotes.push(newQuote) ;
    alert("yyyyyy")
  }
-  
- @Input()
-  quote!: Quote;
- @Output() isComplete = new EventEmitter<boolean>();
 
  quoteDelete(complete:boolean){
-   this.isComplete.emit(complete);
- }
-
+  this.quoteDelete
+}
+ 
   constructor() { }
 
   ngOnInit(): void {

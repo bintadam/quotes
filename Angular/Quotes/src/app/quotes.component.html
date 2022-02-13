@@ -1,5 +1,5 @@
-<h1 class="text-center text-white">Create A Quote</h1>
 <form class="ft" #form = ngForm (ngSubmit)=submitQuote(form.value)>
+  <h1></h1>
   <div class="form-group">
     <label for="name" class="text-white">Name</label>
     <input type="text" id="name" class="form-control" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
@@ -34,6 +34,8 @@
 
 </form>
 
+
+
 <br><br>
 
 <table class = "table">
@@ -44,7 +46,7 @@
       <td class="blockquote-footer float-right">
           uthor <br> <cite title="Author"> {{ quote.author }} </cite>
       </td>
-      <td class="blockquote-footer float-left">
+      <td>
           name <br> <cite title="name"> {{ quote.name }} </cite>
       </td>
 
