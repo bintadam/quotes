@@ -38,7 +38,15 @@ export class QuotesComponent implements OnInit {
  }
 
  quoteDelete(index: any){
- this.quotes.splice(index,1)  
+ this.quotes.splice(index)  
+}
+
+ quoteLike(index: any){
+   this.quotes.splice(index)
+ }
+
+ quoteDislike(index: any){
+  this.quotes.splice(index)
 }
  
   constructor() { }
