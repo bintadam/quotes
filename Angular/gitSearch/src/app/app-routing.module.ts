@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SearchComponent } from './search/search.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 const routes: Routes = [
-  { path: 'navbar', component: NavbarComponent},
-  { path: 'search', component: SearchComponent},
+  { path: 'Home', component: HomeComponent},
+  { path: 'Repositories', component: RepositoriesComponent},
   { path:'**', component:NotFoundComponent},
 ];
 
