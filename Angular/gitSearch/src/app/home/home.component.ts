@@ -7,6 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core'
 })
 export class HomeComponent implements OnInit {
 
+  
+
   // value!: string;
   // @Output() valueEmitter= new EventEmitter<any> ();
   
