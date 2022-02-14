@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     RepositoriesComponent,
     SearchComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
