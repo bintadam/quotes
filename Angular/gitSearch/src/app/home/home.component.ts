@@ -9,13 +9,13 @@ export class HomeComponent implements OnInit {
 
   
 
-  value!: string;
-  @Output() valueEmitter= new EventEmitter<any> ();
+  // value!: string;
+  // @Output() valueEmitter= new EventEmitter<any> ();
   
   constructor() { }
-  user(){
-    this.valueEmitter.emit(this.value);
-  }
+  // user(){
+  //   this.valueEmitter.emit(this.value);
+  // }
 
   ngOnInit(): void {
   }
