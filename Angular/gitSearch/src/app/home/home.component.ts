@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Output, EventEmitter } from '@angular/core'
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  // value!: string;
+  // @Output() valueEmitter= new EventEmitter<any> ();
+  
+  // constructor() { }
+  // sender(){
+  //   this.valueEmitter.emit(this.value);
+  // }
 
   ngOnInit(): void {
   }
