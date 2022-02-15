@@ -1,0 +1,17 @@
+<app-search (valueEmitter)="fetchRepo($event)"></app-search>
+  <div class="row row-cols-2 row-cols-md-4">
+    <div class="col" *ngFor="let repository of repo">
+      <div class="card h-120">
+        <div class="card-body">
+          <h2 class="card-title"></h2>
+          <p>{{repository.description}}</p>
+        </div>
+      <div class="card-footer">
+        <small class="text-aqua">
+        {{repository.forks}}/{{repository.language}}/
+        </small>
+      </div>
+
+    </div>
+  </div>
+</div>
