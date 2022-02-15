@@ -1,0 +1,16 @@
+<app-search (valueEmitter)="fetchRepo($event, i)"></app-search>
+  <div class="row row-cols-2 row-cols-md-4">
+    <div class="col">
+      <div class="card h-120">
+        <div class="card-body">
+          <h2 class="card-title">{{repository.name}}</h2>
+          <p>{{repository.description}}</p>
+        </div>
+      <div class="card-footer">
+        <small class="text-aqua">
+        {{repository.forks}}
+        </small>
+      </div>
+    </div>
+  </div>
+</div>

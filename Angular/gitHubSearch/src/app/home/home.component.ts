@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+import { User } from '../user';
+import { UserService } from '../user-service/user.service';
 
 @Component({
   selector: 'app-home',
@@ -7,15 +9,23 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core'
 })
 export class HomeComponent implements OnInit {
 
-  value!: string;
-  @Output() valueEmitter= new EventEmitter<any> ();
-  
-  constructor() { }
-  user(){
-    this.valueEmitter.emit(this.value);
+  user: User[] = [];
+  findUser(value: string) {
+    this.userService.findUser(value).then(
+      (success) => {
+        this.user = this.userService.user;
+        console.log(this.user);
+      },
+      (error) => {
+        console.log(this.user);
+      }
+    );
   }
 
+  constructor(private userService: UserService) {}
+
   ngOnInit(): void {
+    this.findUser('bintadam');
   }
 
 }
