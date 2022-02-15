@@ -5,7 +5,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { RepositoriesComponent } from './repositories/repositories.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,7 +15,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HomeComponent,
-    RepositoriesComponent,
     SearchComponent,
     NavbarComponent,
     NotFoundComponent,
