@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { rejects } from 'assert';
+import { resolve } from 'dns';
 
 
 @Injectable({
@@ -21,5 +23,26 @@ export class UserService {
       following : string;
       public_repos : String ;
     }
+
+    let balan = new Promise<void>((resolve, reject) => {
+      this.user = [];
+      this. http
+      .get<ApiRespond (this._URL + value + this.token)
+      .toPromise()
+      .then(
+        (results) => {
+          this.user.push(results);
+          console.log (results);
+
+          resolve();
+
+        },
+
+        (err) => {
+          reject();
+        }
+      );
+    });
+    return balan;
   }
 }
