@@ -1,13 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-
   value: string;
   @Output() valueEmitter = new EventEmitter<any>();
   
@@ -16,8 +14,6 @@ export class SearchComponent implements OnInit {
     this.valueEmitter.emit(this.value);
   }
 
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
+
