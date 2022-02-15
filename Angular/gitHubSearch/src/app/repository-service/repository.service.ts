@@ -11,7 +11,8 @@ export class RepositoryService {
   token = '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';
 
   constructor(public http: HttpClient) {}
-  fetchRepo(value:string): Observable<any>{
-    return this.http.get(this._URL + value +'/repositories' + this.token);
-  }
+  fetchRepo(value: string): Observable<any> {
+    return this.http.get(this._URL + value + '/repos?' + this.token);
+  }  
+ 
 }

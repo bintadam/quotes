@@ -1,8 +1,21 @@
 <div class="row">
   <div class="col-md mb-4">
-    <form #form="ngForm" name="form"(submit)= "newUser()" class="form-inline md-form form-sm">
+    <form
+      #targetForm="ngForm"
+      name="targetForm"
+      (submit)="newUser()"
+      class="form-inline md-form form-sm mt-0">
+    
       <div class="form-group">
-        <input [(ngModel)]="value" name="value" size="40" type="search"  class="form-inline md-form ml-3" placeholder="Search">
+        <input
+          required
+          [(ngModel)]="value"
+          name="value"
+          id="result"
+          class="form-control form-control-sm ml-3 w-30 "
+          type="search"
+          placeholder="Search">
+        
       </div>
     </form>
   </div>

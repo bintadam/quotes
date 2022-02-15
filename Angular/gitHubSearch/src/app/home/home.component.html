@@ -1,10 +1,35 @@
-<div class="container-fluid" id="container">
+<div class="container-fluid" id="homeContainer">
   <div class="row">
     <div class="col-md-6">
-      <div class="logo">
-        <img src="/src/assets/git.png" alt="" class="img">
-      </div>
       <app-search (valueEmitter)="findUser($event)"></app-search>
+    </div>
+    <div class="col-md-5" *ngFor="let s of user">
+      <div class="card shadow-lg p-3 mb-5 text-white bg-dark rounded">
+        <img [src]="s.avatar_url" [alt]="s.name" class="profile" />
+        <div class="card-body">
+          <div class="center">
+            <h2>{{ <s></s>.name }}</h2>
+            <p>{{ s.bio }}</p>
+          </div>
+
+          <p class="center">
+            <span class="badge badge-success">
+              Followers: {{ s.followers }}
+            </span>
+
+            <span class="badge badge-success">
+              Following: {{ s.following }}
+            </span>
+            <span class="badge badge-success">
+              Repositories: {{ s.public_repos }}
+            </span>
+
+            <span class="badge badge-success"
+              >Public repos: {{ s.public_repos }}</span
+            >
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

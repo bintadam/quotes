@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { User } from '../user';
+import { Users } from '../repositories/user';
 import { UserService } from '../user-service/user.service';
 
 @Component({
@@ -8,9 +8,10 @@ import { UserService } from '../user-service/user.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  user: User[] = [];
-  findUser(value: string) {
+ 
+  user: Users[];
+  findUser: any;
+  tafutaMtumiaji(value) {
     this.userService.findUser(value).then(
       (success) => {
         this.user = this.userService.user;
@@ -21,11 +22,11 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
+  
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.findUser('bintadam');
+    this.findUser('Bintadam');
   }
 
 }

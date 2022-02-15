@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Repo } from '../repo';
+import { Component, OnInit } from '@angular/core'
 import { RepositoryService } from '../repository-service/repository.service';
+import { Repositories } from './repo';
 
 @Component({
   selector: 'app-repositories',
@@ -9,19 +9,18 @@ import { RepositoryService } from '../repository-service/repository.service';
 })
 export class RepositoriesComponent implements OnInit {
   
+  repo: Repositories[];
+  constructor(public repoService: RepositoryService) { }
 
-  repo: Repo[] = [];
-
-  constructor(public repoService: RepositoryService ) {} 
-    
-  fetchRepo(value:string){
-    this.repoService.fetchRepo(value).subscribe((data) =>{
-        this.repo = data;
-        console.log (this.repo)
-      });
-    }
-    
+  fetchRepo(value: string) {
+    this.repoService.fetchRepo(value).subscribe((data) => {
+      this.repo = data;
+      console.log(this.repo);
+    });
+  }
+  
   ngOnInit(): void {
+    this.fetchRepo('Bintadam');
   }
 
 }
