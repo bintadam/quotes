@@ -1,17 +1,14 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Users } from '../repositories/user';
-
+import { HttpClient } from '@angular/common/http';
+import { Users } from '../user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
   user: Users[] = [];
-  
   _URL = 'https://api.github.com/users/';
-  token = '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';
+  token = '?8b9e17143d094a525a75e0d0637d4f7691770cb4';
 
   constructor(private http: HttpClient) {}
   findUser(value: string) {
@@ -23,7 +20,7 @@ export class UserService {
       following: string;
       public_repos: string;
     }
-    let balan = new Promise<void>((resolve, reject) => {
+    let ahadi = new Promise<void>((resolve, reject) => {
       this.user = [];
       this.http
         .get<ApiResponse>(this._URL + value + this.token)
@@ -40,8 +37,6 @@ export class UserService {
           }
         );
     });
-    return balan;
+    return ahadi;
   }
 }
-
-  

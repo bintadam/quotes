@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core'
-import { Users } from '../repositories/user';
-import { UserService } from '../user-service/user.service';
+import { UserService } from '../../services/user.service';
+
+import { Users } from 'src/app/user';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
- 
   user: Users[];
-
   findUser(value) {
     this.userService.findUser(value).then(
       (success) => {
@@ -22,11 +21,10 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-  
+
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.findUser('Bintadam');
+    this.findUser('bintadam');
   }
-
 }

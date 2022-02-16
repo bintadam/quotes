@@ -1,31 +1,32 @@
 <div class="container-fluid" id="homeContainer">
   <div class="row">
     <div class="col-md-6">
+      
       <app-search (valueEmitter)="findUser($event)"></app-search>
     </div>
-    <div class="col-md-5" *ngFor="let s of user">
+    <div class="col-md-5" *ngFor="let u of user">
       <div class="card shadow-lg p-3 mb-5 text-white bg-dark rounded">
-        <img [src]="s.avatar_url" [alt]="s.name" class="profile" />
+        <img [src]="u.avatar_url" [alt]="u.name" class="profile" />
         <div class="card-body">
           <div class="center">
-            <h2>{{ <s></s>.name }}</h2>
-            <p>{{ s.bio }}</p>
+            <h2>{{ u.name }}</h2>
+            <p>{{ u.bio }}</p>
           </div>
 
           <p class="center">
             <span class="badge badge-success">
-              Followers: {{ s.followers }}
+              Followers: {{ u.followers }}
             </span>
 
             <span class="badge badge-success">
-              Following: {{ s.following }}
+              Following: {{ u.following }}
             </span>
             <span class="badge badge-success">
-              Repositories: {{ s.public_repos }}
+              Repositories: {{ u.public_repos }}
             </span>
 
             <span class="badge badge-success"
-              >Public repos: {{ s.public_repos }}</span
+              >Public repos: {{ u.public_repos }}</span
             >
           </p>
         </div>
@@ -33,3 +34,5 @@
     </div>
   </div>
 </div>
+
+

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Redressed&display=swap');
+
+
+#container h1{
+    font-family: 'Festive', cursive;
+    color: skyblue;
+}
+
+#container a{
+    color: whitesmoke;
+}

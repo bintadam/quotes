@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { RepositoryService } from '../repository-service/repository.service';
-import { Repositories } from './repo';
+import { Component, OnInit } from '@angular/core';
+import { Users } from 'src/app/user';
+import { RepoService } from 'src/app/services/repo.service';
+import { Repositories } from 'src/app/repo';
 
 @Component({
   selector: 'app-repositories',
@@ -8,9 +9,8 @@ import { Repositories } from './repo';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-  
   repo: Repositories[];
-  constructor(public repoService: RepositoryService) { }
+  constructor(public repoService: RepoService) { }
 
   fetchRepo(value: string) {
     this.repoService.fetchRepo(value).subscribe((data) => {
@@ -18,9 +18,9 @@ export class RepositoriesComponent implements OnInit {
       console.log(this.repo);
     });
   }
-  
+
   ngOnInit(): void {
-    this.fetchRepo('Bintadam');
+    this.fetchRepo('bintadam');
   }
 
 }
