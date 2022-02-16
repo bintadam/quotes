@@ -9,11 +9,9 @@ import { Users } from '../repositories/user';
 export class UserService {
 
   user: Users[] = [];
+  
   _URL = 'https://api.github.com/users/';
-  token = '?8b9e17143d094a525a75e0d0637d4f7691770cb4';
-
-  // _URL = 'https://api.github.com/users/';
-  // token = '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';
+  token = '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';
 
   constructor(private http: HttpClient) {}
   findUser(value: string) {

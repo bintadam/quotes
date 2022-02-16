@@ -5,10 +5,10 @@
   margin-top: 20px;
   padding: 8px;
   background: transparent;
-  color: white;
+  color: black;
 }
 
 ::placeholder {
-  color: white;
+  color: black;
   font-weight: bolder;
 }

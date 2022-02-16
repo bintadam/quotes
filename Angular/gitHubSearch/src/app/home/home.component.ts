@@ -10,8 +10,8 @@ import { UserService } from '../user-service/user.service';
 export class HomeComponent implements OnInit {
  
   user: Users[];
-  findUser: any;
-  tafutaMtumiaji(value) {
+
+  findUser(value) {
     this.userService.findUser(value).then(
       (success) => {
         this.user = this.userService.user;

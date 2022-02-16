@@ -1,0 +1,42 @@
+#homeContainer {
+  justify-content: center;
+
+}
+
+
+form {
+  margin-left: 80px;
+
+}
+
+#result{
+  width: 20%;
+  /*
+  margin-top: 30px;
+  margin-left: 670px;
+  */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 8px;
+}
+
+.profile {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px
+}
+
+.center {
+  text-align: center;
+}

@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
-.body{
-  background-color: plum;
-}
 
 .card-title {
   font-family: 'Josefin Sans', sans-serif;
@@ -9,7 +6,7 @@
 }
 .card {
   max-width: 700px;
-  background-color: rgb(255, 226, 231);
+  background-color: rgb(252, 206, 213);
   color: rgb(3, 3, 3);
   width: 60%;
   margin-left: auto;

@@ -2,9 +2,9 @@
 
 #container h1{
  font-family: 'Festive', cursive;
- color: red;
+ color: rgb(245, 195, 203);
 }
 
 #container  a{
-  color: aqua;
+  color: rgb(216, 189, 216);
 }
